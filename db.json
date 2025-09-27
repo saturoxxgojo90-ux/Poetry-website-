@@ -3,17 +3,18 @@
     {
       "id": 1,
       "name": "Mirza Ghalib",
-      "poem": "Hazaron Khwahishen Aisi..."
+      "poems": [
+        "Hazaron Khwahishen Aisi...",
+        "Dil-e-Nadaan Tujhe Hua Kya Hai..."
+      ]
     },
     {
       "id": 2,
       "name": "Allama Iqbal",
-      "poem": "Lab Pe Aati Hai Dua..."
-    },
-    {
-      "id": 3,
-      "name": "William Shakespeare",
-      "poem": "Shall I compare thee to a summer’s day?"
+      "poems": [
+        "Lab Pe Aati Hai Dua...",
+        "Khudi Ko Kar Buland Itna..."
+      ]
     }
   ]
 }
