@@ -1,0 +1,19 @@
+{
+  "poets": [
+    {
+      "id": 1,
+      "name": "Mirza Ghalib",
+      "poem": "Hazaron Khwahishen Aisi..."
+    },
+    {
+      "id": 2,
+      "name": "Allama Iqbal",
+      "poem": "Lab Pe Aati Hai Dua..."
+    },
+    {
+      "id": 3,
+      "name": "William Shakespeare",
+      "poem": "Shall I compare thee to a summer’s day?"
+    }
+  ]
+}
