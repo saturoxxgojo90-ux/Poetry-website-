@@ -1,7 +1,7 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
-fetch("https://saturoxxgojo90-ux.github.io/Poetry-website-/db.json")
+fetch("https://raw.githubusercontent.com/saturoxxgojo90-ux/Poetry-website-/main/db.json")
   .then(res => res.json())
   .then(data => {
     const poet = data.poets.find(p => p.id == id);
