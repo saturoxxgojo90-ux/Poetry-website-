@@ -11,7 +11,7 @@ fetch("https://my-json-server.typicode.com/saturoxxgojo90-ux/Poetry-website-/db"
       const quotesDiv = document.getElementById("quotes");
       poet.quotes.forEach(q => {
         const p = document.createElement("p");
-        p.textContent = "❝ " + q + " ❞";
+        p.innerHTML = "❝ " + q.replace(/\n/g, "<br>") + " ❞";
         quotesDiv.appendChild(p);
       });
     }
