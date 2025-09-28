@@ -1,4 +1,4 @@
-fetch("https://raw.githubusercontent.com/saturoxxgojo90-ux/Poetry-website-/main/db.json")
+fetch("https://my-json-server.typicode.com/saturoxxgojo90-ux/Poetry-website-/db")
   .then(res => res.json())
   .then(data => {
     const poetsDiv = document.getElementById("poets");
