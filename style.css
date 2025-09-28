@@ -1,6 +1,8 @@
 body {
-  background: red !important;
+  background: black !important;
+  color: white !important;
 }
+
 /* 🌸 General Page Style */
 body {
   font-family: 'Poppins', sans-serif;
