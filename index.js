@@ -1,4 +1,4 @@
-fetch("https://saturoxxgojo90-ux.github.io/Poetry-website-/db.json")
+fetch("https://raw.githubusercontent.com/saturoxxgojo90-ux/Poetry-website-/main/db.json")
   .then(res => res.json())
   .then(data => {
     const poetsDiv = document.getElementById("poets");
