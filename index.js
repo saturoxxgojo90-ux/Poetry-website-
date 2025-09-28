@@ -1,11 +1,15 @@
 fetch("https://my-json-server.typicode.com/saturoxxgojo90-ux/Poetry-website-/poets")
   .then(res => res.json())
   .then(data => {
-    document.body.innerHTML += "<h2>Poets:</h2>";
+    const container = document.getElementById("poets");
+    container.innerHTML = ""; // clear "Loading..."
     data.forEach(poet => {
-      document.body.innerHTML += "<div>" + poet.name + "</div>";
+      const div = document.createElement("div");
+      div.textContent = poet.name;
+      container.appendChild(div);
     });
   })
   .catch(err => {
-    document.body.innerHTML += "<p style='color:red'>Error: " + err + "</p>";
+    document.getElementById("poets").textContent = "Failed to load poets.";
+    console.error(err);
   });
