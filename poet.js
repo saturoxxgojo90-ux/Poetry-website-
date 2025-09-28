@@ -9,15 +9,24 @@ fetch("https://raw.githubusercontent.com/saturoxxgojo90-ux/Poetry-website-/main/
       document.getElementById("poetName").textContent = poet.name;
 
       const quotesDiv = document.getElementById("quotes");
+      quotesDiv.innerHTML = ""; // clear first
+
       poet.quotes.forEach(q => {
         const p = document.createElement("p");
 
-        // 🔥 This makes \n turn into real new lines
-        p.innerHTML = "❝ " + q.split("\n").join("<br>") + " ❞";
+        // 🔥 Fix: show new lines inside quotes
+        // works if your db.json has \n or \\n
+        p.innerHTML = "❝ " + q.replace(/\\n/g, "<br>").replace(/\n/g, "<br>") + " ❞";
 
         quotesDiv.appendChild(p);
       });
+    } else {
+      document.getElementById("poetName").textContent = "Poet not found";
     }
+  })
+  .catch(err => {
+    console.error("Error loading quotes:", err);
+    document.getElementById("poetName").textContent = "Failed to load quotes";
   });
 
 function goBack() {
