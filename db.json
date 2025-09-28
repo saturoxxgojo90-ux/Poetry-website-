@@ -3,17 +3,19 @@
     {
       "id": 1,
       "name": "Mirza Ghalib",
-      "poems": [
-        "Hazaron Khwahishen Aisi...",
-        "Dil-e-Nadaan Tujhe Hua Kya Hai..."
+      "quotes": [
+        "Hazaron khwahishen aisi ke har khwahish pe dam nikle",
+        "Dil hi to hai na sang o khisht, dard se bhar na aaye kyon"
+        // add 100 quotes here
       ]
     },
     {
       "id": 2,
       "name": "Allama Iqbal",
-      "poems": [
-        "Lab Pe Aati Hai Dua...",
-        "Khudi Ko Kar Buland Itna..."
+      "quotes": [
+        "Khudi ko kar buland itna ke har taqdeer se pehle",
+        "Uthh ke ab bazm-e-jahan ka aur hi andaaz hai"
+        // add 100 quotes here
       ]
     }
   ]
