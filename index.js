@@ -1,22 +1,32 @@
-// index.js
+// Poets Data (no need for db.json anymore)
+const poets = [
+  {
+    id: 1,
+    name: "Mirza Ghalib",
+    quotes: [
+      "Dil-e-nadaan tujhe hua kya hai\nAakhir is dard ki dawa kya hai",
+      "Hazaaron khwahishein aisi ke har khwahish pe dam nikle\nBahut nikle mere armaan lekin phir bhi kam nikle",
+      "Ishq par zor nahin hai yeh woh aatish Ghalib\nJo lagaye na lage aur bujhaye na bane"
+    ]
+  },
+  {
+    id: 2,
+    name: "Allama Iqbal",
+    quotes: [
+      "Khudi ko kar buland itna ke har taqdeer se pehle\nKhuda bande se khud pooche, bata teri raza kya hai",
+      "Sitaron se aage jahan aur bhi hain\nAbhi ishq ke imtihan aur bhi hain",
+      "Tu shaheen hai, parwaz hai kaam tera\nTere saamne aasman aur bhi hain"
+    ]
+  }
+];
 
-// Fetch poets from db.json
-fetch("db.json")
-  .then(response => response.json())
-  .then(data => {
-    const poetList = document.getElementById("poetList");
-    poetList.innerHTML = ""; // clear loading text
-
-    data.poets.forEach(poet => {
-      const li = document.createElement("li");
-      const a = document.createElement("a");
-      a.textContent = poet.name;
-      a.href = `poet.html?id=${poet.id}`;
-      li.appendChild(a);
-      poetList.appendChild(li);
-    });
-  })
-  .catch(error => {
-    console.error("Error loading poets:", error);
-    document.getElementById("poetList").innerHTML = "Failed to load poets.";
+// Render Poets List
+document.addEventListener("DOMContentLoaded", () => {
+  const list = document.getElementById("poetList");
+  list.innerHTML = ""; // clear loading text
+  poets.forEach(poet => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="poet.html?id=${poet.id}">${poet.name}</a>`;
+    list.appendChild(li);
   });
+});
