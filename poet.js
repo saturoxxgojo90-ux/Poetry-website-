@@ -1,34 +1,31 @@
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
+// Read query string from URL
+const urlParams = new URLSearchParams(window.location.search);
+const poetId = parseInt(urlParams.get("id")); // example: ?id=1
 
-fetch("https://raw.githubusercontent.com/saturoxxgojo90-ux/Poetry-website-/main/db.json")
-  .then(res => res.json())
+// Load poets data
+fetch("db.json")
+  .then(response => response.json())
   .then(data => {
-    const poet = data.poets.find(p => p.id == id);
-    if (poet) {
-      document.getElementById("poetName").textContent = poet.name;
+    const poet = data.poets.find(p => p.id === poetId);
 
-      const quotesDiv = document.getElementById("quotes");
-      quotesDiv.innerHTML = ""; // clear first
-
-      poet.quotes.forEach(q => {
-        const p = document.createElement("p");
-
-        // 🔥 Fix: show new lines inside quotes
-        // works if your db.json has \n or \\n
-        p.innerHTML = "❝ " + q.replace(/\\n/g, "<br>").replace(/\n/g, "<br>") + " ❞";
-
-        quotesDiv.appendChild(p);
-      });
-    } else {
+    if (!poet) {
       document.getElementById("poetName").textContent = "Poet not found";
+      return;
     }
-  })
-  .catch(err => {
-    console.error("Error loading quotes:", err);
-    document.getElementById("poetName").textContent = "Failed to load quotes";
+
+    // Show poet name
+    document.getElementById("poetName").textContent = poet.name;
+
+    // Show quotes
+    const quotesDiv = document.getElementById("quotes");
+    poet.quotes.forEach(q => {
+      const p = document.createElement("p");
+      p.innerHTML = q.replace(/\\n/g, "<br>"); // handle line breaks
+      quotesDiv.appendChild(p);
+    });
   });
 
+// Back button
 function goBack() {
   window.location.href = "index.html";
 }
