@@ -17,7 +17,7 @@ h1, #poetName {
   animation: fadeIn 2s ease-in-out;
 }
 
-/* 🌸 Poet List */
+/* 🌸 Poet Buttons */
 #poets {
   display: flex;
   flex-direction: column;
@@ -27,25 +27,24 @@ h1, #poetName {
   padding: 0;
 }
 
-/* Poet Buttons */
 #poets a {
   display: block;
   padding: 18px 28px;
   border-radius: 14px;
-  background: linear-gradient(90deg, #ff7eb3, #ff758c); /* Pink gradient */
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
   color: #fff;
-  font-size: 1.4rem; /* Bigger text */
+  font-size: 1.4rem;
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 0.5px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
-  -webkit-tap-highlight-color: transparent; /* Remove ugly blue tap */
+  -webkit-tap-highlight-color: transparent; /* remove ugly blue tap */
 }
 
 #poets a:hover {
   transform: scale(1.05);
-  background: linear-gradient(90deg, #ff9a9e, #fad0c4); /* Soft hover */
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
 }
 
 /* 🌸 Quotes */
@@ -72,13 +71,13 @@ button {
   margin: 20px;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(90deg, #3a86ff, #265d97); /* Blue gradient */
+  background: linear-gradient(90deg, #3a86ff, #265d97);
   color: white;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
-  -webkit-tap-highlight-color: transparent; /* Remove blue tap effect */
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
@@ -95,4 +94,4 @@ button:hover {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
-    }
+                                           }
