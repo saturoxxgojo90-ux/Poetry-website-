@@ -17,7 +17,7 @@ const poets = [
       "Sitaron se aage jahan aur bhi hain\nAbhi ishq ke imtihan aur bhi hain",
       "Tu shaheen hai, parwaz hai kaam tera\nTere saamne aasman aur bhi hain",
       "Dil ameer tha, muqadar gareeb tha\nHam buhat ache the, bura naseeb tha",
-      "Amal se zindagi banti hai jannat bhi, jahannum\nbhiYe khaaki apni fitrat mein na noori hai na naari hai"
+      "Amal se zindagi banti he jannat bhi, jahannum\nbhiYe khaaki apni fitrat mein na noori hai na naari he"
     ]
   }
 ];
