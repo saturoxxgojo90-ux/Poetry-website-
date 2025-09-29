@@ -1,31 +1,51 @@
-// Read query string from URL
-const urlParams = new URLSearchParams(window.location.search);
-const poetId = parseInt(urlParams.get("id")); // example: ?id=1
+// Same Poets Data
+const poets = [
+  {
+    id: 1,
+    name: "Mirza Ghalib",
+    quotes: [
+      "Dil-e-nadaan tujhe hua kya hai\nAakhir is dard ki dawa kya hai",
+      "Hazaaron khwahishein aisi ke har khwahish pe dam nikle\nBahut nikle mere armaan lekin phir bhi kam nikle",
+      "Ishq par zor nahin hai yeh woh aatish Ghalib\nJo lagaye na lage aur bujhaye na bane"
+    ]
+  },
+  {
+    id: 2,
+    name: "Allama Iqbal",
+    quotes: [
+      "Khudi ko kar buland itna ke har taqdeer se pehle\nKhuda bande se khud pooche, bata teri raza kya hai",
+      "Sitaron se aage jahan aur bhi hain\nAbhi ishq ke imtihan aur bhi hain",
+      "Tu shaheen hai, parwaz hai kaam tera\nTere saamne aasman aur bhi hain"
+    ]
+  }
+];
 
-// Load poets data
-fetch("db.json")
-  .then(response => response.json())
-  .then(data => {
-    const poet = data.poets.find(p => p.id === poetId);
+// Read URL parameter (?id=)
+function getPoetId() {
+  const params = new URLSearchParams(window.location.search);
+  return parseInt(params.get("id"));
+}
 
-    if (!poet) {
-      document.getElementById("poetName").textContent = "Poet not found";
-      return;
-    }
+// Show Poet & Quotes
+document.addEventListener("DOMContentLoaded", () => {
+  const poetId = getPoetId();
+  const poet = poets.find(p => p.id === poetId);
 
-    // Show poet name
+  if (poet) {
     document.getElementById("poetName").textContent = poet.name;
-
-    // Show quotes
     const quotesDiv = document.getElementById("quotes");
+    quotesDiv.innerHTML = "";
     poet.quotes.forEach(q => {
       const p = document.createElement("p");
-      p.innerHTML = q.replace(/\\n/g, "<br>"); // handle line breaks
+      p.textContent = q;
       quotesDiv.appendChild(p);
     });
-  });
+  } else {
+    document.getElementById("poetName").textContent = "Poet not found!";
+  }
+});
 
-// Back button
+// Back Button
 function goBack() {
   window.location.href = "index.html";
 }
