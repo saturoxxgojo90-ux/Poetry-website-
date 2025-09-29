@@ -16,7 +16,8 @@ const poets = [
       "Khudi ko kar buland itna ke har taqdeer se pehle\nKhuda bande se khud pooche, bata teri raza kya hai",
       "Sitaron se aage jahan aur bhi hain\nAbhi ishq ke imtihan aur bhi hain",
       "Tu shaheen hai, parwaz hai kaam tera\nTere saamne aasman aur bhi hain",
-      "Dil ameer tha, muqadar gareeb tha\nHam buhat ache the, bura naseeb tha"
+      "Dil ameer tha, muqadar gareeb tha\nHam buhat ache the, bura naseeb tha",
+      "Amal se zindagi banti he jannat bhi, jahannum bhi\nYe khaaki apni fitrat mein na noori hai na naari he"
     ]
   }
 ];
