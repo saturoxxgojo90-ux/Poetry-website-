@@ -1,20 +1,16 @@
-fetch("https://raw.githubusercontent.com/saturoxxgojo90-ux/Poetry-website-/main/db.json")
+const poetsDiv = document.getElementById("poets");
+
+fetch("db.json")
   .then(res => res.json())
   .then(data => {
-    const poetsDiv = document.getElementById("poets");
-    poetsDiv.innerHTML = ""; // clear "Loading poets..."
-
+    poetsDiv.innerHTML = "";
     data.poets.forEach(poet => {
-      const div = document.createElement("div");
-      div.textContent = poet.name;
-      div.style.cursor = "pointer";
-      div.onclick = () => {
-        window.location.href = `poet.html?id=${poet.id}`;
-      };
-      poetsDiv.appendChild(div);
+      const link = document.createElement("a");
+      link.href = `poet.html?name=${encodeURIComponent(poet.name)}`;
+      link.textContent = poet.name;
+      poetsDiv.appendChild(link);
     });
   })
   .catch(err => {
-    document.getElementById("poets").textContent = "❌ Failed to load poets";
-    console.error(err);
+    poetsDiv.textContent = "Failed to load poets";
   });
