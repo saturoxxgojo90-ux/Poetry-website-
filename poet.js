@@ -37,7 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
     quotesDiv.innerHTML = "";
     poet.quotes.forEach(q => {
       const p = document.createElement("p");
-      p.textContent = q;
+      // ✅ Fix: allow \n to become <br>
+      p.innerHTML = q.replace(/\n/g, "<br>");
       quotesDiv.appendChild(p);
     });
   } else {
