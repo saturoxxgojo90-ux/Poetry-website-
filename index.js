@@ -1,21 +1,17 @@
-const poetsDiv = document.getElementById("poets");
-
+// Load poets from db.json
 fetch("db.json")
-  .then(res => res.json())
+  .then(response => response.json())
   .then(data => {
+    const poetsDiv = document.getElementById("poets");
     poetsDiv.innerHTML = ""; // clear "Loading..."
 
     data.poets.forEach(poet => {
-      // Create clickable poet name
       const link = document.createElement("a");
-      link.href = `poet.html?name=${encodeURIComponent(poet.name)}`;
-      link.textContent = poet.name;
 
-      // Add this <a> into the poets div
+      // 👇 This link will correctly open poet.html on GitHub Pages
+      link.href = `poet.html?id=${poet.id}`;
+
+      link.textContent = poet.name;
       poetsDiv.appendChild(link);
     });
-  })
-  .catch(err => {
-    console.error(err);
-    poetsDiv.textContent = "Failed to load poets";
   });
