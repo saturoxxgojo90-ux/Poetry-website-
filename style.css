@@ -122,3 +122,25 @@ button:hover {
   transform: scale(1.05);
   background: linear-gradient(90deg, #ff9a9e, #fad0c4);
   }
+.poet-btn {
+  background: #111; /* Dark background */
+  color: #f5d76e;   /* Golden text */
+  border: 2px solid #f5d76e; /* Golden border */
+  padding: 15px 25px;
+  margin: 12px 0;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  width: 280px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(245, 215, 110, 0.3);
+}
+
+.poet-btn:hover {
+  background: #f5d76e;
+  color: #111;
+  box-shadow: 0 0 20px rgba(245, 215, 110, 0.8);
+  transform: scale(1.05);
+}
