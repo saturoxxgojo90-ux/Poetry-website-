@@ -6,8 +6,7 @@ const poets = [
     quotes: [
       "Dil-e-nadaan tujhe hua kya hai\nAakhir is dard ki dawa kya hai",
       "Hazaaron khwahishein aisi ke har khwahish pe dam nikle\nBahut nikle mere armaan lekin phir bhi kam nikle",
-      "Ishq par zor nahin hai yeh woh aatish Ghalib\nJo lagaye na lage aur bujhaye na bane",
-      "Dil ameer tha, muqadar gareeb tha\nHam buhat ache the, bura naseeb tha"
+      "Ishq par zor nahin hai yeh woh aatish Ghalib\nJo lagaye na lage aur bujhaye na bane"
     ]
   },
   {
@@ -16,7 +15,8 @@ const poets = [
     quotes: [
       "Khudi ko kar buland itna ke har taqdeer se pehle\nKhuda bande se khud pooche, bata teri raza kya hai",
       "Sitaron se aage jahan aur bhi hain\nAbhi ishq ke imtihan aur bhi hain",
-      "Tu shaheen hai, parwaz hai kaam tera\nTere saamne aasman aur bhi hain"
+      "Tu shaheen hai, parwaz hai kaam tera\nTere saamne aasman aur bhi hain",
+      "Dil ameer tha, muqadar gareeb tha\nHam buhat ache the, bura naseeb tha"
     ]
   }
 ];
