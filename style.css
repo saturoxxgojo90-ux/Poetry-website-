@@ -1,8 +1,4 @@
 /* 🌸 General Page Style */
-* {
-  -webkit-tap-highlight-color: transparent; /* remove blue tap effect globally */
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
@@ -22,33 +18,34 @@ h1, #poetName {
 }
 
 /* 🌸 Poet List */
-#poetList {
-  list-style: none;
-  padding: 0;
+#poets {
   display: flex;
   flex-direction: column;
   gap: 15px;
   max-width: 400px;
   margin: 30px auto;
+  padding: 0;
 }
 
-#poetList li a {
+/* Poet Buttons */
+#poets a {
   display: block;
   padding: 18px 28px;
   border-radius: 14px;
-  background: linear-gradient(90deg, #ff7eb3, #ff758c); /* pink gradient */
+  background: linear-gradient(90deg, #ff7eb3, #ff758c); /* Pink gradient */
   color: #fff;
-  font-size: 1.4rem;  /* larger font */
+  font-size: 1.4rem; /* Bigger text */
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* shadow so it stands out */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent; /* Remove ugly blue tap */
 }
 
-#poetList li a:hover {
+#poets a:hover {
   transform: scale(1.05);
-  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4); /* Soft hover */
 }
 
 /* 🌸 Quotes */
@@ -75,12 +72,13 @@ button {
   margin: 20px;
   border: none;
   border-radius: 8px;
-  background: linear-gradient(90deg, #3a86ff, #265d97); /* blue gradient */
+  background: linear-gradient(90deg, #3a86ff, #265d97); /* Blue gradient */
   color: white;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+  -webkit-tap-highlight-color: transparent; /* Remove blue tap effect */
 }
 
 button:hover {
@@ -97,4 +95,4 @@ button:hover {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
-  }
+    }
