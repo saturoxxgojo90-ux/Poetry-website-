@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  min-height: 100vh;
 }
 
 /* 🌸 Heading */
@@ -13,7 +14,7 @@ h1, #poetName {
   font-family: 'Urdu Naskh Asiatype', serif;
   font-size: 2.5rem;
   color: #f4e2d8;
-  margin: 20px 0;
+  margin: 30px 0 10px;
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -23,44 +24,45 @@ h1, #poetName {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   max-width: 400px;
-  margin: 30px auto;
+  margin: 40px auto;
 }
 
 /* 🌟 Poet Buttons */
 #poetList li a {
   display: block;
   padding: 15px 25px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #FFD700, #FFA500); /* gold gradient */
+  border-radius: 15px;
+  background: linear-gradient(135deg, #FFD700, #FFA500); /* Gold Gradient */
   color: #222;
   font-size: 1.3rem;
   font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
   transition: all 0.3s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
 #poetList li a:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
   background: linear-gradient(135deg, #FFC107, #FF9800);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 /* 🌸 Quotes */
 #quotes {
-  max-width: 600px;
-  margin: 20px auto;
+  max-width: 650px;
+  margin: 30px auto;
   padding: 10px;
 }
 
 #quotes p {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 215, 0, 0.1); /* light gold background */
+  border-left: 4px solid #FFD700;
   padding: 15px;
-  border-radius: 15px;
-  margin: 15px 0;
+  border-radius: 12px;
+  margin: 20px 0;
   font-style: italic;
   font-size: 1.2rem;
   line-height: 1.6;
@@ -69,24 +71,24 @@ h1, #poetName {
 
 /* 🌟 Back Button */
 button {
-  padding: 12px 25px;
-  margin: 20px;
+  padding: 12px 28px;
+  margin: 25px;
   border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #FFD700, #FFA500); /* gold gradient */
+  border-radius: 12px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
   color: #222;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
   transition: 0.3s;
   -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
   background: linear-gradient(135deg, #FFC107, #FF9800);
-  transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  transform: scale(1.07);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 /* 🌸 Animations */
@@ -98,4 +100,4 @@ button:hover {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
-}
+        }
