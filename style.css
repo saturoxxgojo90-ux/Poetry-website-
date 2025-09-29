@@ -7,18 +7,21 @@ body {
   padding: 0;
   text-align: center;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* 🌸 Heading */
 h1, #poetName {
-  font-family: 'Urdu Naskh Asiatype', serif;
+  font-family: 'Georgia', serif;
   font-size: 2.5rem;
   color: #f4e2d8;
-  margin: 30px 0 10px;
-  animation: fadeIn 2s ease-in-out;
+  margin: 25px 0;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
-/* 🌟 Poet List */
+/* 🌸 Poet List */
 #poetList {
   list-style: none;
   padding: 0;
@@ -26,69 +29,68 @@ h1, #poetName {
   flex-direction: column;
   gap: 20px;
   max-width: 400px;
-  margin: 40px auto;
+  margin: 20px auto;
 }
 
-/* 🌟 Poet Buttons */
 #poetList li a {
   display: block;
   padding: 15px 25px;
-  border-radius: 15px;
-  background: linear-gradient(135deg, #FFD700, #FFA500); /* Gold Gradient */
-  color: #222;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c);
+  color: #fff;
   font-size: 1.3rem;
-  font-weight: bold;
   text-decoration: none;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent; /* remove ugly blue tap */
 }
 
 #poetList li a:hover {
-  transform: scale(1.07);
-  background: linear-gradient(135deg, #FFC107, #FF9800);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+  box-shadow: 0 6px 20px rgba(255, 120, 150, 0.5);
 }
 
-/* 🌸 Quotes */
+/* 🌸 Quotes Section */
 #quotes {
   max-width: 650px;
-  margin: 30px auto;
+  margin: 20px auto;
   padding: 10px;
 }
 
 #quotes p {
-  background: rgba(255, 215, 0, 0.1); /* light gold background */
-  border-left: 4px solid #FFD700;
-  padding: 15px;
-  border-radius: 12px;
-  margin: 20px 0;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 18px;
+  border-radius: 15px;
+  margin: 15px 0;
   font-style: italic;
   font-size: 1.2rem;
   line-height: 1.6;
-  animation: fadeInUp 1s ease forwards;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  animation: fadeInUp 0.8s ease forwards;
 }
 
-/* 🌟 Back Button */
+/* 🌸 Back Button */
 button {
-  padding: 12px 28px;
+  padding: 12px 25px;
   margin: 25px;
   border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #FFD700, #FFA500);
-  color: #222;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #3a86ff, #265d97);
+  color: white;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
   transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
-  background: linear-gradient(135deg, #FFC107, #FF9800);
+  background: linear-gradient(90deg, #265d97, #3a86ff);
   transform: scale(1.07);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  box-shadow: 0 6px 20px rgba(58, 134, 255, 0.5);
 }
 
 /* 🌸 Animations */
@@ -100,4 +102,4 @@ button:hover {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
-        }
+  }
