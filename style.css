@@ -1,4 +1,8 @@
 /* 🌸 General Page Style */
+* {
+  -webkit-tap-highlight-color: transparent; /* remove blue tap effect globally */
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
@@ -30,15 +34,16 @@ h1, #poetName {
 
 #poetList li a {
   display: block;
-  padding: 15px 25px;
-  border-radius: 12px;
-  background: linear-gradient(90deg, #ff7eb3, #ff758c); /* pink-red gradient */
+  padding: 18px 28px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #ff7eb3, #ff758c); /* pink gradient */
   color: #fff;
-  font-size: 1.3rem;  /* bigger font */
+  font-size: 1.4rem;  /* larger font */
   text-decoration: none;
   font-weight: bold;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* shadow so it stands out */
   transition: all 0.3s ease;
-  -webkit-tap-highlight-color: transparent; /* remove blue tap highlight */
 }
 
 #poetList li a:hover {
@@ -76,7 +81,6 @@ button {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
-  -webkit-tap-highlight-color: transparent; /* remove blue tap effect */
 }
 
 button:hover {
@@ -93,7 +97,4 @@ button:hover {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
-}
-body {
-  border: 5px solid red;
-}
+  }
