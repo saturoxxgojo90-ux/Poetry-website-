@@ -23,6 +23,24 @@ const poets = [
     ]
   }
 ];
+id: 3,
+    name: "Jaun Elia",
+    quotes: [
+      "Hamesha der kar deta hoon main\nHar kaam karne mein",
+      "Ab ke hum bichhde to shaayad kabhi khwabon mein milein\nJis tarah sukhe hue phool kitaabon mein milein",
+      "Main bhi bahut ajeeb hoon itna ajeeb hoon ke bas\nKhud ko tabaah kar liya aur malaal bhi nahin"
+    ]
+  },
+  {
+    id: 4,
+    name: "Ahmad Faraz",
+    quotes: [
+      "Ranjish hi sahi dil hi dukhane ke liye aa\nAa phir se mujhe chhod ke jaane ke liye aa",
+      "Ab ke hum bichhde to shaayad kabhi khwabon mein milein\nJis tarah sukhe hue phool kitaabon mein milein",
+      "Tumhaare shehar ka mausam bada suhana lage\nMain ek shaam chura loon agar bura na lage"
+    ]
+  }
+];
 
 // Render Poets List
 document.addEventListener("DOMContentLoaded", () => {
