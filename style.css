@@ -1,57 +1,109 @@
-/* General Page Styling */
+/* 🌸 General Page Style */
 body {
-  font-family: 'Georgia', serif;
-  background: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
   color: #fff;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  padding: 50px;
 }
 
-/* Heading */
-h1 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #f1c40f;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+/* 🌸 Heading */
+h1, #poetName {
+  font-family: 'Urdu Naskh Asiatype', serif;
+  font-size: 2.5rem;
+  color: #f4e2d8;
+  margin: 20px 0;
+  animation: fadeIn 2s ease-in-out;
 }
 
-/* Golden Button Styling */
-button, 
-a {
+/* 🌸 Poet List */
+#poetList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 30px auto;
+}
+
+/* 🌸 Poet Buttons */
+#poetList li a {
   display: block;
-  width: 250px;
-  margin: 15px auto;
   padding: 15px;
+  margin: 10px auto;
+  width: 220px;
+  text-align: center;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
-  text-transform: uppercase;
-  color: #6b4a00;
-  background: linear-gradient(to bottom, #f9d423, #ff4e50);
-  border: 2px solid #b8860b;
+  border-radius: 10px;
+  color: #fff;
+
+  /* 🔹 Default Theme (Blue) */
+  background: linear-gradient(135deg, #f7971e, #00ffd200);
+
+  /* 🌿 Alternative Themes (pick one and replace the line above): */
+  /* Green:  background: linear-gradient(135deg, #11998e, #38ef7d); */
+  /* Purple: background: linear-gradient(135deg, #a18cd1, #fbc2eb); */
+  /* Golden: background: linear-gradient(135deg, #f7971e, #ffd200); */
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  -webkit-tap-highlight-color: transparent; /* remove blue tap effect */
+}
+
+#poetList li a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* 🌸 Quotes */
+#quotes {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+#quotes p {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 15px;
+  margin: 15px 0;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* 🌸 Back Button */
+button {
+  padding: 12px 25px;
+  margin: 20px;
+  border: none;
   border-radius: 8px;
-  box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.6),
-              inset 0 -2px 5px rgba(0, 0, 0, 0.3),
-              0 5px 15px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(90deg, #3a86ff, #265d97); /* blue gradient */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
+  -webkit-tap-highlight-color: transparent; /* remove blue tap effect */
 }
 
-/* Hover Effect */
-button:hover, 
-a:hover {
-  background: linear-gradient(to bottom, #ffed85, #e6a600);
-  color: #3b2a00;
-  transform: translateY(-3px);
-  box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.8),
-              inset 0 -2px 5px rgba(0, 0, 0, 0.3),
-              0 8px 20px rgba(0, 0, 0, 0.6);
+button:hover {
+  background: linear-gradient(90deg, #265d97, #3a86ff);
+  transform: scale(1.05);
 }
 
-/* Active/Click Effect */
-button:active, 
-a:active {
-  transform: translateY(1px);
-  background: linear-gradient(to bottom, #e6a600, #ffed85);
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
-  }
+/* 🌸 Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
