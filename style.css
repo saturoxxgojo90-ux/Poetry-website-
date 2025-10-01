@@ -42,7 +42,7 @@ h1, #poetName {
   color: #fff;
 
   /* 🔹 Default Theme (Blue) */
-  background: linear-gradient(135deg, #f7971e, #00ffd200);
+  background: linear-gradient(135deg, #f7971e, #ffd200);
 
   /* 🌿 Alternative Themes (pick one and replace the line above): */
   /* Green:  background: linear-gradient(135deg, #11998e, #38ef7d); */
